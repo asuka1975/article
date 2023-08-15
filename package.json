@@ -11,6 +11,7 @@
   "type": "module",
   "dependencies": {
     "crypto-es": "^2.0.4",
+    "dayjs": "^1.11.9",
     "rehype-stringify": "^9.0.3",
     "remark-extract-frontmatter": "^3.2.0",
     "remark-frontmatter": "^4.0.1",
