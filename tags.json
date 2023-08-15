@@ -1,0 +1,27 @@
+[
+    {
+        "name": "Docker",
+        "logo": "https://www.docker.com/wp-content/uploads/2022/03/horizontal-logo-monochromatic-white.png",
+        "link": "https://www.docker.com/"
+    },
+    {
+        "name": "OpenGL",
+        "logo": "https://www.khronos.org/assets/images/api_logos/opengl.svg",
+        "link": "https://www.opengl.org/"
+    },
+    {
+        "name": "Linux",
+        "logo": "https://kernel.org/theme/images/logos/favicon.png",
+        "link": "https://kernel.org/"
+    },
+    {
+        "name": "GLFW",
+        "logo": "https://raw.githubusercontent.com/glfw/glfw.github.io/master/_assets/teacup.svg",
+        "link": "https://www.glfw.org/"
+    },
+    {
+        "name": "first-commission",
+        "logo": null,
+        "link": "/"
+    }
+]
