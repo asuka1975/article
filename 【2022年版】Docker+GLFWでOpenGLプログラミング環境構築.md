@@ -1,3 +1,10 @@
+---
+tags:
+  - OpenGL
+  - Docker
+  - Linux
+  - GLFW
+---
 本記事は、ブログのテストを兼ねた[Qiitaからのコピー](https://qiita.com/asuka1975/items/5384ff4c20accb87cdca)です。
 
 # はじめに
