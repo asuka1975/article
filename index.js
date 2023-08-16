@@ -76,6 +76,13 @@ async function main() {
             await writeFile(`tags/${tag}.json`, JSON.stringify(tagJson));
         }
     }
+
+    const index = await readFile("index.json", "utf-8");
+    const indexJson = JSON.parse(index);
+    if(indexJson.filter(item => item.id === hashFilename).length === 0) {
+        indexJson.push({ id: hashFilename, title: title });
+        await writeFile("index.json", JSON.stringify(indexJson));
+    }
 }
 
 
