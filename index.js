@@ -37,7 +37,8 @@ async function main() {
         .use(remark2rehype)
 
     const filename = process.argv[2];
-    const hashFilename = CryptoES.MD5(filename).toString();
+    const title = filename.replace("manuscripts/", "").replace(/\.md$/, "");
+    const hashFilename = CryptoES.MD5(title).toString();
     
     const createdDateString = await execAsync(`sh -c "git log 'ブログ開設しました.md' | grep Date | sed -e 's/Date:\s*//g' | tail -n 1"`);
     const createdDate = dayjs(createdDateString.stdout.trim()).format("YYYY-MM-DD");
@@ -56,7 +57,7 @@ async function main() {
 
     prune(parsed);
     const json = JSON.stringify({
-        title: filename.replace(/\.md$/, ""),
+        title: title,
         content: parsed,
         meta: frontmatter,
     });
@@ -64,6 +65,17 @@ async function main() {
 
     await writeFile(`articles/${hashFilename}.json`, json);
     await writeFile(`headers/${hashFilename}.json`, header);
+
+    const tags = frontmatter.tags;
+
+    for(const tag of tags) {
+        const tagInfo = await readFile(`tags/${tag}.json`, "utf-8");
+        const tagJson = JSON.parse(tagInfo);
+        if(tagJson.articles.indexOf(hashFilename) === -1) {
+            tagJson.articles.push(hashFilename);
+            await writeFile(`tags/${tag}.json`, JSON.stringify(tagJson));
+        }
+    }
 }
 
 
