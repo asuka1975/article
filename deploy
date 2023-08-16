@@ -2,7 +2,11 @@
 
 set -e -o pipefail
 
-git status | grep manuscripts | sed -e 's/\s*//g' | sed -e 's/"//g' | xargs -I {} npm start {}
+git status | grep manuscripts \
+     | sed -e 's/\s*//g' \
+     | sed -e 's/"//g' \
+     | sed -e 's/modified://g' \
+     | xargs -I {} npm start {}
 
 git add .
 git commit -m "$1"
