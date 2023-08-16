@@ -2,7 +2,13 @@
 
 set -e -o pipefail
 
-git status | grep manuscripts \
+git status | grep manuscripts | grep deleted \
+     | sed -e 's/\s*//g' \
+     | sed -e 's/"//g' \
+     | sed -e 's/deleted://g' \
+     | xargs -I {} npm run remove {}
+
+git status | grep manuscripts | grep -v deleted \
      | sed -e 's/\s*//g' \
      | sed -e 's/"//g' \
      | sed -e 's/modified://g' \

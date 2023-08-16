@@ -52,7 +52,7 @@ async function main() {
         Object.assign(frontmatter, parsedFrontmatter);
         parsed.children.shift();
     }
-    frontmatter.created = createdDate;
+    frontmatter.created = createdDate === "Invalid Date" ? dayjs().format("YYYY-MM-DD") : createdDate;
     frontmatter.updated = updatedDate === createdDate ? null : updatedDate;
 
     prune(parsed);
