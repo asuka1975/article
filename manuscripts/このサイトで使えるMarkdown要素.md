@@ -70,7 +70,7 @@ int main() {
 3. sample7
 
 | Song | Artist | Year |
-| ---- | ---- |  |
+| ---- | ---- | ---- |
 | The Sliding Mr. Bones (Next Stop, Pottersville) | セル内で<br>改行 | 1961 |
 | Witchy Woman | Malcolm Lockyer | 1972 |
 | Shining Star | The Eagles | 1975 |
