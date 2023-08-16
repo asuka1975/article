@@ -60,8 +60,10 @@ async function main() {
         content: parsed,
         meta: frontmatter,
     });
+    const header = JSON.stringify({ content: null, ...json });
 
     await writeFile(`articles/${hashFilename}.json`, json);
+    await writeFile(`headers/${hashFilename}.json`, header);
 }
 
 
