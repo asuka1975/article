@@ -1,1 +1,1 @@
-{"title":"【2022年版】Docker+GLFWでOpenGLプログラミング環境構築","meta":{"tags":["OpenGL","Docker","Linux","GLFW"],"created":"2023-08-16","updated":null}}
+{"title":"【2022年版】Docker+GLFWでOpenGLプログラミング環境構築","meta":{"tags":["OpenGL","Docker","Linux","GLFW"],"seo":{"description":"記事では、Dockerコンテナ内でOpenGLを使用したグラフィックスプログラミング環境の構築手順が詳しく解説されています。X11アプリのホスト表示やNVIDIA GPUの利用も説明され、シミュレーション研究者向けに便利な方法が提供されています。"},"created":"2023-08-16","updated":"2023-08-17"}}

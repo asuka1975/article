@@ -4,6 +4,8 @@ tags:
   - Docker
   - Linux
   - GLFW
+seo:
+  description: 記事では、Dockerコンテナ内でOpenGLを使用したグラフィックスプログラミング環境の構築手順が詳しく解説されています。X11アプリのホスト表示やNVIDIA GPUの利用も説明され、シミュレーション研究者向けに便利な方法が提供されています。
 ---
 本記事は、ブログのテストを兼ねた[Qiitaからのコピー](https://qiita.com/asuka1975/items/5384ff4c20accb87cdca)です。
 
